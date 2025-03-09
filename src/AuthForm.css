@@ -1,0 +1,111 @@
+/* Navbar Profile Styles */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile span {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .profile button {
+    padding: 5px 10px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .profile button:hover {
+    background: #c82333;
+  }
+  
+  /* Auth Form Overlay Styles */
+  .auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  /* Auth Form Popup Styles */
+  .auth-form {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%; /* Responsive width */
+    animation: fadeIn 0.3s ease; /* Fade-in animation */
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .auth-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .auth-form button:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .auth-form {
+      width: 100%; /* Full width on small screens */
+      padding: 15px;
+    }
+  
+    .auth-form h2 {
+      font-size: 20px; /* Smaller heading on small screens */
+    }
+  
+    .auth-form input,
+    .auth-form button {
+      font-size: 14px; /* Smaller font size on small screens */
+    }
+  }
