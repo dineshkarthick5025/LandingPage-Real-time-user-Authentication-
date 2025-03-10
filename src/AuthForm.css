@@ -1,111 +1,124 @@
 /* Navbar Profile Styles */
 .profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .profile span {
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .profile button {
-    padding: 5px 10px;
-    background: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .profile button:hover {
-    background: #c82333;
-  }
-  
-  /* Auth Form Overlay Styles */
-  .auth-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  /* Auth Form Popup Styles */
-  .auth-form {
-    position: relative;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 90%; /* Responsive width */
-    animation: fadeIn 0.3s ease; /* Fade-in animation */
-  }
-  
-  /* Fade-in Animation */
-  @keyframes fadeIn {
-    from {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.profile span {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.profile button {
+  padding: 6px 12px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.profile button:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+/* Auth Form Overlay Styles */
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* Auth Form Popup Styles */
+.auth-form {
+  position: relative;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
       opacity: 0;
       transform: translateY(-20px);
-    }
-    to {
+  }
+  to {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
+}
+
+.auth-form h2 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.auth-form button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .auth-form {
+      width: 95%;
+      padding: 20px;
+  }
   .auth-form h2 {
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+      font-size: 20px;
   }
-  
-  .auth-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
+  .auth-form input,
   .auth-form button {
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+      font-size: 14px;
   }
-  
-  .auth-form button:hover {
-    background: #0056b3;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 480px) {
-    .auth-form {
-      width: 100%; /* Full width on small screens */
-      padding: 15px;
-    }
-  
-    .auth-form h2 {
-      font-size: 20px; /* Smaller heading on small screens */
-    }
-  
-    .auth-form input,
-    .auth-form button {
-      font-size: 14px; /* Smaller font size on small screens */
-    }
-  }
+}
