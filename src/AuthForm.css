@@ -42,6 +42,7 @@
   align-items: center;
   z-index: 1000;
   backdrop-filter: blur(5px);
+  padding: 20px; /* Ensures better spacing on smaller screens */
 }
 
 /* Auth Form Popup Styles */
@@ -52,19 +53,22 @@
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   max-width: 400px;
-  width: 90%;
+  width: 100%;
   animation: fadeIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Fade-in Animation */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -91,6 +95,7 @@
   outline: none;
 }
 
+/* Buttons with better spacing and responsiveness */
 .auth-form button {
   width: 100%;
   padding: 12px;
@@ -109,16 +114,33 @@
 }
 
 /* Responsive Design */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .auth-form {
-      width: 95%;
-      padding: 20px;
+    width: 90%;
+    padding: 20px;
   }
   .auth-form h2 {
-      font-size: 20px;
+    font-size: 20px;
   }
   .auth-form input,
   .auth-form button {
-      font-size: 14px;
+    font-size: 14px;
   }
 }
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .auth-form {
+    width: 95%;
+    padding: 18px;
+  }
+  .auth-form h2 {
+    font-size: 18px;
+  }
+  .auth-form input,
+  .auth-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
